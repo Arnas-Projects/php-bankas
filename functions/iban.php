@@ -1,2 +1,4 @@
+<?php
+
 # generate Lithuanian IBAN
 

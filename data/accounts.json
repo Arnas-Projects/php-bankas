@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "id": "6997299049704",
+        "first_name": "Briedis",
+        "last_name": "Testas ar vekia daug zodziu",
+        "personal_code": "kazkas kazkas 1234",
+        "iban": "TEMP",
+        "balance": 0
+    },
+    {
+        "id": "69972e4b6fb74",
+        "first_name": "Zebras",
+        "last_name": "Baksafsdgsddg",
+        "personal_code": "523523234",
+        "iban": "TEMP",
+        "balance": 1000.27
+    }
+]
