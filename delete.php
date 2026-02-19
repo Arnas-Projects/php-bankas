@@ -1,0 +1,2 @@
+# Handles deletion (POST only)
+
