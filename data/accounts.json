@@ -14,5 +14,13 @@
         "personal_code": "523523234",
         "iban": "TEMP",
         "balance": 1000.27
+    },
+    {
+        "id": "699770ff7e121",
+        "first_name": "Petras",
+        "last_name": "Baranauskas",
+        "personal_code": "123123213123",
+        "iban": "TEMP",
+        "balance": 100
     }
 ]

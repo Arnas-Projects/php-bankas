@@ -1,0 +1,49 @@
+* {
+    font-family: "TikTok Sans", sans-serif;
+}
+
+body {
+    background-color: #3A2E39;
+    color: white;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: separate;
+    border: 1px solid white;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    font-size: 20px;
+    text-align: center;
+}
+
+table th, table td {
+    border: 1px solid white;
+    padding: 15px;
+}
+
+table th {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table td {
+    font-size: 18px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #48E5C2;
+}
+
+a:visited {
+    color: #A1CDA8;
+}
+
+a:hover {
+    color: #C5E7E2;
+}
+
+a:active {
+    color: #77A0A9;
+}
