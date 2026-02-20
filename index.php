@@ -30,6 +30,7 @@ usort($accounts, function($a, $b) {
         <th>IBAN</th>
         <th>Balance</th>
         <th>Add</th>
+        <th>Withdraw</th>
         <th>Delete</th>
     </tr>
 
@@ -41,6 +42,9 @@ usort($accounts, function($a, $b) {
             <td><?= $account['iban'] ?></td>
             <td><?= $account['balance'] ?></td>
             <td><a href="add.php?id=<?= $account['id'] ?>">Add Money</a></td>
+            <td>
+                <a href="withdraw.php?id=<?= $account['id'] ?>">Withdraw</a>
+            </td>
             <td>
                 <form method="POST" action="delete.php">
                     <input type="hidden" name="id" value="<?= $account['id'] ?>">

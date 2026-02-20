@@ -21,6 +21,14 @@
         "last_name": "Baranauskas",
         "personal_code": "123123213123",
         "iban": "TEMP",
-        "balance": 100
+        "balance": 224.5
+    },
+    {
+        "id": "699862678c1ba",
+        "first_name": "as",
+        "last_name": "ub",
+        "personal_code": "123",
+        "iban": "TEMP",
+        "balance": 0
     }
 ]
