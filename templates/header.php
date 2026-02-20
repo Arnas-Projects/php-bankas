@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 const URL = 'http://localhost/php-bankas/';
 
 ?>
@@ -23,3 +24,18 @@ const URL = 'http://localhost/php-bankas/';
     </nav>
 
     <hr>
+
+<?php
+
+require_once 'functions/helpers.php';
+$message = getMessage();
+
+if ($message):
+
+?>
+
+    <div style="color: crimson; margin: 10px 0;">
+        <?= $message ?>
+    </div>
+
+<?php endif; ?>

@@ -2,6 +2,7 @@
 
 # Page to add money
 
+require 'functions/validation.php';
 require 'functions/storage.php';
 require 'templates/header.php';
 
@@ -32,6 +33,12 @@ if (!$account) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $amount = (float) $_POST['amount'];
+
+    if(!validateAmount($amount)) {
+        setMessage('Suma, kurią bandote įnešti turi būti teigiama');
+        header("Location: add.php?id=$id");
+        die;
+    }
 
     foreach ($accounts as &$acc) {
         if ($acc['id'] === $id) {

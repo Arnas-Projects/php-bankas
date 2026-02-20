@@ -2,6 +2,7 @@
 
 # Form to create new account
 
+require 'functions/validation.php';
 require 'functions/storage.php';
 require 'templates/header.php';
 
@@ -9,11 +10,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $accounts = getAccounts();
 
+    $firstName = $_POST['first_name'];
+    $lastName = $_POST['last_name'];
+    $personalCode = $_POST['personal_code'];
+
+    if (!validateName($firstName)) {
+        setMessage('Vardas privalo būti ilgesnis nei 3 raidės.');
+        header('Location: create.php');
+        die;
+    }
+
+    if (!validateName($lastName)) {
+        setMessage('Pavardė turi būti ilgesnė nei 3 raidės.');
+        header('Location: create.php');
+        die;
+    }
+
+    if (!validatePersonalCodeUnique($personalCode, $accounts)) {
+        setMessage('Asmens kodas turi būti unikalus');
+        header('Location: create.php');
+        die;
+    }
+
     $newAccount = [
         'id' => uniqid(),
-        'first_name' => $_POST['first_name'],
-        'last_name' => $_POST['last_name'],
-        'personal_code' => $_POST['personal_code'],
+        'first_name' => $firstName,
+        'last_name' => $lastName,
+        'personal_code' => $personalCode,
         'iban' => 'TEMP',
         'balance' => 0
     ];
