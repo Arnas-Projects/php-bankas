@@ -73,4 +73,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Withdraw</button>
 </form>
 
-<?= require 'templates/footer.php'; ?>
+<?php require 'templates/footer.php'; ?>

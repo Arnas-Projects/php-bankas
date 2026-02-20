@@ -16,14 +16,6 @@
         "balance": 219.5
     },
     {
-        "id": "69987c3442f89",
-        "first_name": "Jonas",
-        "last_name": "Antanaitis",
-        "personal_code": "333222111",
-        "iban": "TEMP",
-        "balance": 12.5
-    },
-    {
         "id": "6998849fd610e",
         "first_name": "Valdemaras",
         "last_name": "Aleksandravi\u010dius",
@@ -54,5 +46,13 @@
         "personal_code": "50496817465",
         "iban": "LT210281711793625613",
         "balance": 65
+    },
+    {
+        "id": "699899117e469",
+        "first_name": "Benas",
+        "last_name": "Artojas",
+        "personal_code": "54545423452",
+        "iban": "LT707443246840991904",
+        "balance": 0
     }
 ]
