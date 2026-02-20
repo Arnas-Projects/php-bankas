@@ -22,5 +22,21 @@
         "personal_code": "",
         "iban": "TEMP",
         "balance": 0
+    },
+    {
+        "id": "69987c0a2f5d5",
+        "first_name": "Jonas",
+        "last_name": "Petraitis",
+        "personal_code": "123456",
+        "iban": "TEMP",
+        "balance": 0
+    },
+    {
+        "id": "69987c3442f89",
+        "first_name": "Jonas",
+        "last_name": "Antanaitis",
+        "personal_code": "333222111",
+        "iban": "TEMP",
+        "balance": 12.5
     }
 ]
