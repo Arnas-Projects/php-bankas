@@ -20,7 +20,15 @@ const URL = 'http://localhost/php-bankas/';
 
     <nav>
         <a href="index.php">Accounts</a>
-        <a href="create.php">Create Accout</a>
+        <a href="create.php">Create Account</a>
+
+        <?php if (isset($_SESSION['user'])): ?>
+            <a href="employee_create.php">Sukurti naują vartotoją</a>
+        <?php endif; ?>
+        
+        <?php if (isset($_SESSION['user'])): ?>
+            <a href="logout.php">Atsijungti</a>
+        <?php endif; ?>
     </nav>
 
     <hr>

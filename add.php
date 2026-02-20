@@ -5,6 +5,9 @@
 require 'functions/validation.php';
 require 'functions/storage.php';
 require 'templates/header.php';
+require 'functions/auth.php';
+
+requireLogin();
 
 
 // Finding account

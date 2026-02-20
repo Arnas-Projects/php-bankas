@@ -6,6 +6,9 @@ require 'functions/iban.php';
 require 'functions/validation.php';
 require 'functions/storage.php';
 require 'templates/header.php';
+require 'functions/auth.php';
+
+requireLogin();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
