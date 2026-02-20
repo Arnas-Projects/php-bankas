@@ -16,27 +16,43 @@
         "balance": 219.5
     },
     {
-        "id": "6998673a1e8a2",
-        "first_name": "22222",
-        "last_name": "bebras",
-        "personal_code": "",
-        "iban": "TEMP",
-        "balance": 0
-    },
-    {
-        "id": "69987c0a2f5d5",
-        "first_name": "Jonas",
-        "last_name": "Petraitis",
-        "personal_code": "123456",
-        "iban": "TEMP",
-        "balance": 0
-    },
-    {
         "id": "69987c3442f89",
         "first_name": "Jonas",
         "last_name": "Antanaitis",
         "personal_code": "333222111",
         "iban": "TEMP",
         "balance": 12.5
+    },
+    {
+        "id": "6998849fd610e",
+        "first_name": "Valdemaras",
+        "last_name": "Aleksandravi\u010dius",
+        "personal_code": "90555",
+        "iban": "LT315608618176989094",
+        "balance": 0
+    },
+    {
+        "id": "699885170a6ef",
+        "first_name": "Zita",
+        "last_name": "Kasparavi\u010di\u016bt\u0117",
+        "personal_code": "55270",
+        "iban": "LT814593459853349947",
+        "balance": 55
+    },
+    {
+        "id": "6998889ee9f5e",
+        "first_name": "Barsukas",
+        "last_name": "Upeliukas",
+        "personal_code": "12345678901",
+        "iban": "LT622283635453945143",
+        "balance": 0
+    },
+    {
+        "id": "69988a066e2cd",
+        "first_name": "Vytautas",
+        "last_name": "Lastauskas",
+        "personal_code": "50496817465",
+        "iban": "LT210281711793625613",
+        "balance": 65
     }
 ]

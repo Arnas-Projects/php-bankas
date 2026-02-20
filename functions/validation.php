@@ -21,3 +21,12 @@ function validateAmount($amount)
 {
     return $amount > 0;
 }
+
+function validatePersonalCodeFormat($personalCode)
+{
+    if (!preg_match('/^\d{11}$/', $personalCode)) {
+        return false;
+    }
+
+    return true;
+}
