@@ -2,6 +2,7 @@
 
 # Form to create new account
 
+require 'functions/iban.php';
 require 'functions/validation.php';
 require 'functions/storage.php';
 require 'templates/header.php';
@@ -13,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstName = $_POST['first_name'];
     $lastName = $_POST['last_name'];
     $personalCode = $_POST['personal_code'];
+    $generatedIban = generateIban();
 
     if (!validateName($firstName)) {
         setMessage('Vardas privalo būti ilgesnis nei 3 raidės.');
@@ -22,6 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!validateName($lastName)) {
         setMessage('Pavardė turi būti ilgesnė nei 3 raidės.');
+        header('Location: create.php');
+        die;
+    }
+
+    if (!validatePersonalCodeFormat($personalCode)) {
+        setMessage('Asmens kodas turi būti sudarytas iš 11 skaitmenų.');
         header('Location: create.php');
         die;
     }
@@ -37,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'first_name' => $firstName,
         'last_name' => $lastName,
         'personal_code' => $personalCode,
-        'iban' => 'TEMP',
+        'iban' => $generatedIban,
         'balance' => 0
     ];
 
@@ -48,6 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: index.php');
     die;
 }
+
+$generatedIban = generateIban();
 
 ?>
 
@@ -66,6 +76,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <label>Personal Code:</label>
     <input type="text" name="personal_code">
+
+    <br><br>
+
+    <label>IBAN:</label>
+    <input style="padding: 0 10px; field-sizing: content" type="text" value="<?= $generatedIban ?>" readonly>
 
     <br><br>
 

@@ -40,6 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // IMPORTANT RULE
             if ($acc['balance'] >= $amount) {
                 $acc['balance'] -= $amount;
+            } else {
+                setMessage('Sąskaitoje nepakanka pinigų.');
+                header("Location: withdraw.php?id=$id");
+                die;
             }
 
             break;
