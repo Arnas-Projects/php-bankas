@@ -8,6 +8,11 @@ body {
     color: white;
 }
 
+nav {
+    display: flex;
+    gap: 50px;
+}
+
 table {
     border-spacing: 0;
     border-collapse: separate;

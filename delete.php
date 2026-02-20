@@ -5,6 +5,9 @@ session_start();
 
 require 'functions/storage.php';
 require 'functions/helpers.php';
+require 'functions/auth.php';
+
+requireLogin();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
