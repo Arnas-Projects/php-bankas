@@ -1,19 +1,11 @@
 [
     {
-        "id": "6997299049704",
-        "first_name": "Briedis",
-        "last_name": "Testas ar vekia daug zodziu",
-        "personal_code": "kazkas kazkas 1234",
-        "iban": "TEMP",
-        "balance": 0
-    },
-    {
         "id": "69972e4b6fb74",
         "first_name": "Zebras",
         "last_name": "Baksafsdgsddg",
         "personal_code": "523523234",
         "iban": "TEMP",
-        "balance": 1000.27
+        "balance": 1075.18
     },
     {
         "id": "699770ff7e121",
@@ -21,13 +13,13 @@
         "last_name": "Baranauskas",
         "personal_code": "123123213123",
         "iban": "TEMP",
-        "balance": 224.5
+        "balance": 219.5
     },
     {
-        "id": "699862678c1ba",
-        "first_name": "as",
-        "last_name": "ub",
-        "personal_code": "123",
+        "id": "6998673a1e8a2",
+        "first_name": "22222",
+        "last_name": "bebras",
+        "personal_code": "",
         "iban": "TEMP",
         "balance": 0
     }

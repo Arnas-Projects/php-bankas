@@ -15,17 +15,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $personalCode = $_POST['personal_code'];
 
     if (!validateName($firstName)) {
-        echo 'Vardas privalo būti ilgesnis nei 3 raidės.';
+        setMessage('Vardas privalo būti ilgesnis nei 3 raidės.');
+        header('Location: create.php');
         die;
     }
 
     if (!validateName($lastName)) {
-        echo 'Pavardė turi būti ilgesnė nei 3 raidės';
+        setMessage('Pavardė turi būti ilgesnė nei 3 raidės.');
+        header('Location: create.php');
         die;
     }
 
     if (!validatePersonalCodeUnique($personalCode, $accounts)) {
-        echo 'Asmens kodas turi būti unikalus.';
+        setMessage('Asmens kodas turi būti unikalus');
+        header('Location: create.php');
         die;
     }
 
