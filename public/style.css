@@ -242,11 +242,11 @@ div.modal {
     margin: 10px;
 }
 
-button.cancel {
+button.cancel-btn {
     background-color: #aeaeae;
     color: #222222;
 }
 
-button.cancel:hover {
+button.cancel-btn:hover {
     background-color: #959494;
 }

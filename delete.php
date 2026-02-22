@@ -22,12 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 setMessage('Negalima ištrinti banko sąskaitos, kurioje yra pinigų.');
                 header('Location: index.php');
                 die;
+            } else {
+                setMessage("{$account['first_name']} {$account['last_name']} banko sąskaita sėkmingai ištrinta!", 'success');
             }
 
             unset($accounts[$key]);
         }
     }
 
+    
     saveAccounts(array_values($accounts));
 }
 

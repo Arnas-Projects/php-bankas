@@ -72,10 +72,12 @@ usort($accounts, function ($a, $b) {
                     <a class="withdraw-money" href="withdraw.php?id=<?= $account['id'] ?>">Nuskaičiuoti</a>
                 </td>
                 <td>
-                    <button class="destroy-btn"
-                        data-id="<?= $account['id'] ?>"
-                        data-name="<?= $account['first_name'] ?> <?= $account['last_name'] ?>">Ištrinti
-                    </button>
+                    <form method="POST" action="delete.php" class="delete-form">
+                        <input type="hidden" name="id" value="<?= $account['id'] ?>">
+                        <input type="hidden" name="balance" value="<?= $account['balance'] ?>">
+                        <input type="hidden" name="name" value="<?= $account['first_name'] ?> <?= $account['last_name'] ?>">
+                        <button class="destroy-btn" type="submit">Delete</button>
+                    </form>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -83,14 +85,19 @@ usort($accounts, function ($a, $b) {
 
 </table>
 
+
+<!-- MODAL -->
+
 <div id="deleteModal" class="modal">
     <div class="modal-content">
         <p id="modalText"></p>
 
-        <form action="delete.php" method="POST" id="confirmDeleteForm">
+        <form method="POST" action="delete.php">
             <input type="hidden" name="id" id="deleteId">
-            <button class="destroy-btn" type="submit" id="confirmBtn">Ištrinti</button>
-            <button class="cancel" type="button" id="cancelBtn">Atšaukti</button>
+            <button class="destroy-btn" type="submit">Ištrinti</button>
+            <button class="cancel-btn" type="button" onclick="document.getElementById('deleteModal').classList.remove('active')">
+                Atšaukti
+            </button>
         </form>
     </div>
 </div>

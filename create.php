@@ -80,7 +80,8 @@ $generatedIban = generateIban();
     <br><br>
 
     <label>Asmens kodas:</label>
-    <input type="text" name="personal_code" placeholder="Įrašykite asmens kodą">
+    <input type="text" name="personal_code" placeholder="Įrašykite asmens kodą"
+    oninput="if (this.value.length > 11) this.value = this.value.slice(0, 11);">
 
     <br><br>
 
