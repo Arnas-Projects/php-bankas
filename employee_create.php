@@ -7,6 +7,12 @@ require_once 'functions/helpers.php';
 
 requireLogin();
 
+if ($_SESSION['role'] !== 'admin') {
+    setMessage('Tik administratorius gali sukurti naują vartotoją.');
+    header('Location: index.php');
+    die;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $username = $_POST['username'];
@@ -36,12 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $employees[] = [
         'username' => $username,
-        'password' => password_hash($password, PASSWORD_DEFAULT)
+        'password' => password_hash($password, PASSWORD_DEFAULT),
+        'role' => 'staff'
     ];
 
     saveEmployees($employees);
 
-    setMessage('Darbuotojo profilis sėkmingai sukurtas!');
+    setMessage('Darbuotojo profilis sėkmingai sukurtas!', 'success');
     header('Location: index.php');
     die;
 }

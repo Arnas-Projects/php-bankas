@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // IMPORTANT RULE
             if ($acc['balance'] >= $amount) {
                 $acc['balance'] -= $amount;
+                $acc['balance'] = round($acc['balance'], 2);
             } else {
                 setMessage('Sąskaitoje nepakanka pinigų.');
                 header("Location: withdraw.php?id=$id");
@@ -53,6 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
+    setMessage("Jūs sėkmingai nuskaičiavote {$amount} € nuo {$account['first_name']} {$account['last_name']} sąskaitos.",
+    'error'
+    );
+
     saveAccounts($accounts);
 
     header('Location: index.php');
@@ -61,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-<h1>Withdraw Money</h1>
+<h1>Pinigų išėmimas</h1>
 
 <p>
     <?= $account['first_name'] ?> <?= $account['last_name'] ?>
@@ -72,8 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </p>
 
 <form method="POST">
-    <input type="number" name="amount" step="0.01" required>
-    <button type="submit">Withdraw</button>
+    <input type="number" name="amount" step="0.01" placeholder="Įrašykite sumą" required>
+    <button type="submit">Nuskaičiuoti pinigus</button>
 </form>
 
 <?php require 'templates/footer.php'; ?>
