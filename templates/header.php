@@ -15,7 +15,7 @@ require_once 'functions/helpers.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= URL ?>public/style.css">
-    <title>PHP Bankas</title>
+    <title><?= $pageTitle ?? 'PHP Bankas' ?></title>
 </head>
 
 <body>

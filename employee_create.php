@@ -1,5 +1,7 @@
 <?php
 
+$pageTitle = 'PHP Bankas - Naujo vartotojo kūrimas';
+
 require 'templates/header.php';
 require 'functions/auth.php';
 require 'functions/storage.php';

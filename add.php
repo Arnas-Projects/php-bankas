@@ -1,5 +1,7 @@
 <?php
 
+$pageTitle = 'PHP Bankas - Pinigų įnešimas';
+
 # Page to add money
 
 require 'functions/validation.php';

@@ -1,5 +1,7 @@
 <?php
 
+$pageTitle = 'PHP Bankas - Sąskaitų sąrašas';
+
 # Shows list of accounts
 
 require 'functions/storage.php';
