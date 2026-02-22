@@ -2,9 +2,12 @@
 
 # sorting, redirecting, flash messages
 
-function setMessage($message)
+function setMessage($message, $type = 'error')
 {
-    $_SESSION['message'] = $message;
+    $_SESSION['message'] = [
+        'text' => $message,
+        'type' => $type
+    ];
 }
 
 function getMessage()
@@ -16,4 +19,14 @@ function getMessage()
     }
 
     return null;
+}
+
+function getRoleLabel($role)
+{
+    $roles = [
+        'admin' => 'Administratorius',
+        'staff' => 'Reguliarus'
+    ];
+
+    return $roles[$role] ?? 'Nežinomas';
 }

@@ -64,30 +64,30 @@ $generatedIban = generateIban();
 
 ?>
 
-<h1>Create Account</h1>
+<h1>Sukurti naują sąskaitą</h1>
 
 <form method="POST">
-    <label>First Name:</label>
-    <input type="text" name="first_name">
+    <label>Vardas: </label>
+    <input type="text" name="first_name" placeholder="Įrašykite vardą">
 
     <br><br>
 
-    <label>Last Name:</label>
-    <input type="text" name="last_name">
+    <label>Pavardė: </label>
+    <input type="text" name="last_name" placeholder="Įrašykite pavardę">
 
     <br><br>
 
-    <label>Personal Code:</label>
-    <input type="text" name="personal_code">
+    <label>Asmens kodas:</label>
+    <input type="text" name="personal_code" placeholder="Įrašykite asmens kodą">
 
     <br><br>
 
     <label>IBAN:</label>
-    <input style="padding: 0 10px; field-sizing: content" type="text" value="<?= $generatedIban ?>" readonly>
+    <input class="iban-input" type="text" value="<?= $generatedIban ?>" readonly>
 
     <br><br>
 
-    <button type="submit">Create</button>
+    <button type="submit">Sukurti</button>
 </form>
 
 <?php require 'templates/footer.php';

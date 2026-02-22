@@ -46,9 +46,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($accounts as &$acc) {
         if ($acc['id'] === $id) {
             $acc['balance'] += $amount;
+            $acc['balance'] = round($acc['balance'], 2);
             break;
         }
     }
+
+    setMessage(
+        "Jūs sėkmingai įnešėte {$amount} € į {$account['first_name']} {$account['last_name']} sąskaitą.",
+        'success'
+    );
 
     saveAccounts($accounts);
 
@@ -73,8 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </p>
 
 <form method="POST">
-    <input type="number" name="amount" step="0.01" required>
-    <button type="submit">Add</button>
+    <input type="number" name="amount" step="0.01" placeholder="Įrašykite sumą" required>
+    <button type="submit">Įnešti pinigus</button>
 </form>
 
 <?php require 'templates/footer.php'; ?>
