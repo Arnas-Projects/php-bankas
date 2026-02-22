@@ -1,5 +1,7 @@
 <?php
 
+$pageTitle = 'PHP Bankas - Sąskaitų sąrašas';
+
 # Shows list of accounts
 
 require 'functions/storage.php';
@@ -70,16 +72,28 @@ usort($accounts, function ($a, $b) {
                     <a class="withdraw-money" href="withdraw.php?id=<?= $account['id'] ?>">Nuskaičiuoti</a>
                 </td>
                 <td>
-                    <form method="POST" action="delete.php">
-                        <input type="hidden" name="id" value="<?= $account['id'] ?>">
-                        <button class="destroy-btn" type="submit">Ištrinti</button>
-                    </form>
+                    <button class="destroy-btn"
+                        data-id="<?= $account['id'] ?>"
+                        data-name="<?= $account['first_name'] ?> <?= $account['last_name'] ?>">Ištrinti
+                    </button>
                 </td>
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>
 
 </table>
+
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <p id="modalText"></p>
+
+        <form action="delete.php" method="POST" id="confirmDeleteForm">
+            <input type="hidden" name="id" id="deleteId">
+            <button class="destroy-btn" type="submit" id="confirmBtn">Ištrinti</button>
+            <button class="cancel" type="button" id="cancelBtn">Atšaukti</button>
+        </form>
+    </div>
+</div>
 
 
 <?php require 'templates/footer.php';

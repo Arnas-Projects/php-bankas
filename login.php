@@ -1,5 +1,7 @@
 <?php
 
+$pageTitle = 'PHP Bankas - Prisijungimas';
+
 require 'functions/storage.php';
 require 'templates/header.php';
 

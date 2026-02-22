@@ -1,5 +1,7 @@
 <?php
 
+$pageTitle = 'PHP Bankas - Pinigų išėmimas';
+
 # Page to withdraw money
 
 require 'functions/validation.php';

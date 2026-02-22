@@ -1,5 +1,7 @@
 <?php
 
+$pageTitle = 'PHP Bankas - Naujos sąskaitos kūrimas';
+
 # Form to create new account
 
 require 'functions/iban.php';

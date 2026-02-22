@@ -6,5 +6,6 @@
 </footer>
 
 </div>
+<script src="<?= URL ?>/public/delete-modal.js"></script>
 </body>
 </html>
