@@ -5,6 +5,7 @@
 require 'functions/storage.php';
 require 'templates/header.php';
 require 'functions/auth.php';
+require_once 'functions/helpers.php';
 
 requireLogin();
 
@@ -20,7 +21,19 @@ usort($accounts, function ($a, $b) {
 
 ?>
 
-<h1>Sąskaitų sąrašas</h1>
+<div class="home-container">
+    <h1>Sąskaitų sąrašas</h1>
+    <?php if (isset($_SESSION['user'])): ?>
+        <div class="login-user-container">
+            <div style="margin-top: 15px; font-size: 18px;">
+                Prisijungęs vartotojas: <strong><?= $_SESSION['user'] ?></strong>
+            </div>
+            <div style="margin-top: 10px; font-size: 18px;">
+                Vartotojo tipas: <strong><?= getRoleLabel($_SESSION['role']) ?></strong>
+            </div>
+        </div>
+    <?php endif; ?>
+</div>
 
 
 <!-- <a href="create.php">Create New Account</a> -->
@@ -31,7 +44,7 @@ usort($accounts, function ($a, $b) {
         <th>Pavardė</th>
         <th>Asmens kodas</th>
         <th>IBAN</th>
-        <th>Likutis</th>
+        <th>Likutis, EUR</th>
         <th>Įnešti pinigus</th>
         <th>Išimti pinigus</th>
         <th>Ištrinti sąskaitą</th>

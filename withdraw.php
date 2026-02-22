@@ -73,12 +73,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </p>
 
 <p>
-    Current balance: <?= $account['balance'] ?>
+    Dabartinis likutis: <?= $account['balance'] ?>
 </p>
 
 <form method="POST">
     <input type="number" name="amount" step="0.01" placeholder="Įrašykite sumą" required>
-    <button type="submit">Nuskaičiuoti pinigus</button>
+    <button type="submit">Patvirtinti</button>
 </form>
 
 <?php require 'templates/footer.php'; ?>

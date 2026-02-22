@@ -17,6 +17,13 @@ nav {
     gap: 50px;
 }
 
+div.home-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
 table {
     border-spacing: 0;
     border-collapse: separate;
@@ -77,11 +84,17 @@ a.withdraw-money:hover {
     padding: 20px;
 }
 
+div.nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 nav {
     display: flex;
     gap: 30px;
     align-items: center;
-    margin-bottom: 25px;
+    font-size: 20px;
+    /* margin-bottom: 25px; */
 }
 
 nav a {
@@ -185,7 +198,7 @@ input:focus {
 
 h1 {
     margin-bottom: 15px;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 p {
@@ -195,4 +208,8 @@ p {
 footer {
     text-align: center;
     font-size: 18px;
+}
+
+img {
+    border-radius: 15px;
 }

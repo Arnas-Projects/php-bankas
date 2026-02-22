@@ -22,29 +22,27 @@ require_once 'functions/helpers.php';
 
     <div class="container">
 
-        <nav>
-            <a href="index.php">Visos sąskaitos</a>
-            <a href="create.php">Sukurti naują sąskaitą</a>
+        <div class="nav-container">
+            <nav>
+                <a href="index.php">Visos sąskaitos</a>
+                <a href="create.php">Sukurti naują sąskaitą</a>
 
-            <?php if (isset($_SESSION['user']) && $_SESSION['role'] === 'admin'): ?>
-                <a href="employee_create.php">Sukurti naują vartotoją</a>
-            <?php endif; ?>
+                <?php if (isset($_SESSION['user']) && $_SESSION['role'] === 'admin'): ?>
+                    <a href="employee_create.php">Sukurti naują vartotoją</a>
+                <?php endif; ?>
 
-            <?php if (isset($_SESSION['user'])): ?>
-                <a href="logout.php">Atsijungti</a>
-            <?php endif; ?>
-        </nav>
-
-        <hr>
-
-        <?php if (isset($_SESSION['user'])): ?>
-            <div style="margin-top: 15px; font-size: 18px;">
-                Prisijungęs vartotojas: <strong><?= $_SESSION['user'] ?></strong>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <a href="logout.php">Atsijungti</a>
+                <?php endif; ?>
+            </nav>
+            
+            <div>
+                <img width="200" src="<?= URL . '/../img/beaver-corp.png' ?>" alt="Beaver Fundings Logo">
             </div>
-            <div style="margin-top: 10px; font-size: 18px;">
-                Vartotojo tipas: <strong><?= getRoleLabel($_SESSION['role']) ?></strong>
-            </div>
-        <?php endif; ?>
+        </div>
+
+
+        <hr style="margin-top: 25px;">
 
         <?php
 

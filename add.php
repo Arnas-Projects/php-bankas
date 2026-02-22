@@ -68,19 +68,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-<h1>Add Money</h1>
+<h1>Inešti pinigus</h1>
 
 <p>
     <?= $account['first_name'] ?> <?= $account['last_name'] ?>
 </p>
 
 <p>
-    Current balance: <?= $account['balance'] ?>
+    Dabartinis likutis: <?= $account['balance'] ?>
 </p>
 
 <form method="POST">
     <input type="number" name="amount" step="0.01" placeholder="Įrašykite sumą" required>
-    <button type="submit">Įnešti pinigus</button>
+    <button type="submit">Patvirtinti</button>
 </form>
 
 <?php require 'templates/footer.php'; ?>
