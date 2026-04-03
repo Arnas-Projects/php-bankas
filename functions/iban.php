@@ -1,7 +1,5 @@
 <?php
 
-# generate Lithuanian IBAN
-
 function generateIban()
 {
     $countryCode = 'LT';

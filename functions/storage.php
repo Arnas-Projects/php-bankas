@@ -1,7 +1,5 @@
 <?php
 
-# read/write JSON file
-
 function getAccounts()
 {
     $file = __DIR__ . '/../data/accounts.json';

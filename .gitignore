@@ -1,5 +1,6 @@
 *.json
 *.png
 *.jpg
+!beaver-corp.png
 *.jpeg
 *.svg

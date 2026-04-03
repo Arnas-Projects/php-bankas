@@ -2,17 +2,12 @@
 
 $pageTitle = 'PHP Bankas - Pinigų įnešimas';
 
-# Page to add money
-
 require 'functions/validation.php';
 require 'functions/storage.php';
 require 'templates/header.php';
 require 'functions/auth.php';
 
 requireLogin();
-
-
-// Finding account
 
 $accounts = getAccounts();
 $id = $_GET['id'] ?? null;
@@ -31,9 +26,6 @@ if (!$account) {
     require 'templates/footer.php';
     die;
 }
-
-
-// Add Money Logic (POST)
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -63,11 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: index.php');
     die;
 }
-
-
-
-// Show Form (GET)
-
 ?>
 
 <h1>Inešti pinigus</h1>

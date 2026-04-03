@@ -76,8 +76,6 @@ a.withdraw-money:hover {
     background-color: rgba(255,255,255,0.1);
 }
 
-/* ==================================== */
-
 .container {
     max-width: 1250px;
     margin: 40px auto;
@@ -186,7 +184,6 @@ input {
 }
 
 input.iban-input {
-    /* padding: 0 10px; */
     field-sizing: content;
     text-align: center;
 }
@@ -213,8 +210,6 @@ footer {
 img {
     border-radius: 15px;
 }
-
-/* ======== DELETE ACCOUNT MODAL ======== */
 
 div.modal {
     position: fixed;

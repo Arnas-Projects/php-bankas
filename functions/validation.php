@@ -1,7 +1,5 @@
 <?php
 
-# check personal code, name length, balance rules
-
 function validateName($name) 
 {
     return strlen(trim($name)) > 3;

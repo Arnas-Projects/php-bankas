@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-# Handles deletion (POST only)
 
 require 'functions/storage.php';
 require 'functions/helpers.php';

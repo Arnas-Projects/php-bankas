@@ -2,8 +2,6 @@
 
 $pageTitle = 'PHP Bankas - Sąskaitų sąrašas';
 
-# Shows list of accounts
-
 require 'functions/storage.php';
 require 'templates/header.php';
 require 'functions/auth.php';
@@ -12,10 +10,6 @@ require_once 'functions/helpers.php';
 requireLogin();
 
 $accounts = getAccounts();
-
-// echo '<pre>';
-// print_r($accounts);
-// echo '</pre>';
 
 usort($accounts, function ($a, $b) {
     return strcmp($a['last_name'], $b['last_name']);
@@ -38,7 +32,6 @@ usort($accounts, function ($a, $b) {
 </div>
 
 
-<!-- <a href="create.php">Create New Account</a> -->
 
 <table border="1" cellpadding="10">
     <tr>

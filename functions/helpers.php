@@ -1,7 +1,5 @@
 <?php
 
-# sorting, redirecting, flash messages
-
 function setMessage($message, $type = 'error')
 {
     $_SESSION['message'] = [

@@ -2,8 +2,6 @@
 
 $pageTitle = 'PHP Bankas - Pinigų išėmimas';
 
-# Page to withdraw money
-
 require 'functions/validation.php';
 require 'functions/storage.php';
 require 'templates/header.php';
@@ -42,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($accounts as &$acc) {
         if ($acc['id'] === $id) {
 
-            // IMPORTANT RULE
             if ($acc['balance'] >= $amount) {
                 $acc['balance'] -= $amount;
                 $acc['balance'] = round($acc['balance'], 2);

@@ -9,12 +9,10 @@ document.querySelectorAll('.delete-form').forEach(form => {
         const name = form.querySelector('input[name="name"]').value;
         const id = form.querySelector('input[name="id"]').value;
 
-        // If balance > 0 → allow normal submit
         if (balance > 0) {
-            return; // backend will handle error message
+            return;
         }
 
-        // If balance == 0 → stop submit and show modal
         e.preventDefault();
 
         modalText.textContent =
